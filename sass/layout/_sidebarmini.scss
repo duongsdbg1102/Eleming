@@ -1,0 +1,70 @@
+.sidebarMini {
+    position: fixed;
+    width: 400px;
+    top: 25%;
+    right: 0;
+    background-color: $color-gray-4;
+    z-index: 300;
+    transform: translateX(100%);
+    transition: all .5s;
+    border-left: 1px solid $color-gray-4;
+    .sidebarMini__button {
+        @include styleButton($color-black-0, $color-gray-4, $color-gray-4, $fs-24, $fw-0, $pd-2, $pd-3);
+        border-radius: 8px 0 0 8px;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: .5s;
+        &:focus{
+            outline: none;
+        }
+    }
+    .sidebarMini__content{
+        padding: $pd-3;
+        width: 150px;
+        text-align: center;
+        h2{
+        font-size: $fs-0;
+    }
+    .Switch{
+        position: relative;
+        width: 50px;
+        height: 25px;
+        margin: 0 $mg-0 + 5;
+        cursor: pointer;
+        input{
+            display: none;
+            &:checked + .slider{
+                &::before{
+                    transform: translateX(22px);
+                }
+            }
+        }
+        .slider{
+            background-color: $color-gray-6;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border-radius:  $br-34;
+            &::before{
+                display: inline-block;
+                content: "";
+                width: 18px;
+                height: 18px;
+                border-radius:50% ;
+               background-color: $color-white-0;
+               position: absolute;
+               bottom: 4px;
+               left: 4px;
+               transition: all .5s;
+              
+            }
+            }
+    }
+}
+    &.is-oppend{
+        transform: translateX(60%);
+    }
+}
+

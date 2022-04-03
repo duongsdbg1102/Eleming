@@ -1,0 +1,25 @@
+.viewing{
+    padding: $pd-3 + 2 0;
+    .viewing__content{
+        width: 90%;
+        margin: 0 auto;
+        h2{
+            font-size: $pd-3;
+
+        }
+    }
+}
+
+@include responsive("screen-max") {
+    .viewing__content {
+        .card {
+            .card-body {
+                .card-title {
+                    margin-bottom: $mg-0 + 5;
+                    @include styleText($color-black-0, $fs-1, $fw-1);
+                }
+                
+            }
+        }
+    }
+}
